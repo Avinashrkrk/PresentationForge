@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PresentationForge
 
-## Getting Started
+AI-powered presentation builder that helps you create professional slides quickly and easily.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 15** - React framework
+- **OpenAI** - AI content generation
+- **Clerk** - Authentication
+- **Prisma** - Database ORM
+- **Neon** - PostgreSQL database
+- **LemonSqueezy** - Payment processing
+
+## 🛠️ Setup
+
+### Prerequisites
+- Node.js 18+
+- npm/yarn/pnpm
+
+### Environment Variables
+Create a `.env.local` file:
+
+```env
+# Database
+DATABASE_URL="your_neon_database_url"
+
+# Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_clerk_publishable_key"
+CLERK_SECRET_KEY="your_clerk_secret_key"
+
+# OpenAI
+OPENAI_API_KEY="your_openai_api_key"
+
+# LemonSqueezy
+LEMONSQUEEZY_API_KEY="your_lemonsqueezy_api_key"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Clone the repo
+git clone https://github.com/Avinashrkrk/PresentationForge.git
+cd PresentationForge
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Install dependencies
+npm install
 
-## Learn More
+# Setup database
+npx prisma generate
+npx prisma db push
 
-To learn more about Next.js, take a look at the following resources:
+# Run development server
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Status
 
-## Deploy on Vercel
+🚧 **Currently in development** - Regular updates being pushed to main branch.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
