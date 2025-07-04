@@ -1,6 +1,6 @@
 'use client'
 import { Project, User } from '@/generated/prisma'
-import React from 'react'
+import React, { use } from 'react'
 import {
   Sidebar,
   SidebarContent,
@@ -12,6 +12,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import NavMain from './nav-main'
 import RecenOpen from './recent-open'
 import { data } from '@/lib/constants'
+import NavFooter from './nav-footer'
 
 function AppSidebar({
     recentProjects,
@@ -54,7 +55,9 @@ function AppSidebar({
         <RecenOpen recentProjects={recentProjects}  />
         
       </SidebarContent>
-      <SidebarFooter />
+      <SidebarFooter>
+        <NavFooter prismaUser={user} />
+      </SidebarFooter>
     </Sidebar>
   )
 }
